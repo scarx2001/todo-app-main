@@ -232,7 +232,6 @@ ul li:hover .remove {
   cursor: pointer;
   padding: 0 10px;
 }
-
 .filter-label:hover {
   color: var(--font-color-hover);
 }
