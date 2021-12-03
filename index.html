@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Frontend Mentor | Todo app</title>
   </head>
-  <body class="theme-light">
+  <body class="theme-dark container">
     <header class="flex-row positions">
       <h1>TODO</h1>
       <div class="theme-block">
@@ -84,8 +84,17 @@
           </li>
         </ul>
       </section>
+      <div class="remove-bottom-items-responsiv">
+        <div class="bottom-items flex-row bottom-items-responsiv">
+          <div class="items-left items-responsiv">
+            <span>5</span> items left
+          </div>
+          <span class="clear clear-responsiv">Clear Completed</span>
+        </div>
+      </div>
+
       <div class="bottom-items flex-row">
-        <div class="items-left"><span>5</span> items left</div>
+        <div class="items-left remove-responsiv"><span>5</span> items left</div>
         <div class="filter flex-row">
           <label class="filter-label">
             <input
@@ -118,9 +127,10 @@
             <span>Completed</span>
           </label>
         </div>
-        <span class="clear">Clear Completed</span>
+        <span class="clear remove-responsiv">Clear Completed</span>
       </div>
     </main>
+
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

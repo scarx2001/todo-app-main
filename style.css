@@ -42,8 +42,9 @@ h1 {
   --main-bg: hsl(235, 21%, 11%);
   --todo-bg: hsl(235, 24%, 19%);
   --todo-shadow: hsl(235, 21%, 11%);
-  --font-color: hsl(234, 39%, 85%);
+  --font-color: hsl(235, 9%, 76%);
   --font-color-hover: #fff;
+  --text-hover-color: hsl(232, 15%, 72%);
 }
 
 .theme-light {
@@ -51,8 +52,9 @@ h1 {
   --main-bg: hsl(0, 0%, 98%);
   --todo-bg: hsl(0, 0%, 98%);
   --todo-shadow: hsl(235, 19%, 35%);
-  --font-color: hsl(236, 9%, 61%);
+  --font-color: hsl(240, 4%, 33%);
   --font-color-hover: hsl(235, 21%, 11%);
+  --text-hover-color: hsl(240, 22%, 85%);
 }
 
 .theme-block {
@@ -89,7 +91,7 @@ h1 {
 
 .add-new-item #addItem {
   background: transparent;
-  color: hsl(235, 19%, 35%);
+  color: var(--font-color);
   border: 0;
   outline: 0;
   width: 100%;
@@ -122,7 +124,7 @@ h1 {
   box-shadow: 0 3px 30px -9px var(--todo-shadow);
   bottom: 70px;
   position: relative;
-  color: hsl(235, 19%, 35%);
+  color: var(--font-color);
 }
 
 ul {
@@ -138,7 +140,7 @@ ul li {
   position: relative;
 }
 .hover-text {
-  color: hsl(240, 26%, 89%);
+  color: var(--text-hover-color);
 }
 
 .checkbox {
@@ -226,7 +228,10 @@ ul li:hover .remove {
   box-shadow: 0 5px 30px -19px var(--todo-shadow);
   position: relative;
   bottom: 70px;
-  color: var(--font-color);
+  color: hsl(0, 0%, 40%);
+}
+.remove-bottom-items-responsiv {
+  display: none;
 }
 
 .filter {
@@ -260,4 +265,106 @@ ul li:hover .remove {
 
 .clear:hover {
   color: var(--font-color-hover);
+}
+@media (max-width: 738px) {
+  html {
+    font-size: 80%;
+  }
+
+  .theme-light {
+    --bg-top-image: 0 0 url(./images/bg-mobile-light.jpg) no-repeat;
+    --main-bg: hsl(0, 0%, 98%);
+    --todo-bg: hsl(0, 0%, 98%);
+    --todo-shadow: hsl(235, 19%, 35%);
+    --font-color: hsl(235, 6%, 40%);
+    --font-color-hover: hsl(235, 21%, 11%);
+    --text-hover-color: hsl(240, 22%, 85%);
+  }
+  .theme-dark {
+    --bg-top-image: 0 0 url(./images/bg-mobile-dark.jpg) no-repeat;
+    --main-bg: hsl(235, 21%, 11%);
+    --todo-bg: hsl(235, 24%, 19%);
+    --todo-shadow: hsl(235, 21%, 11%);
+    --font-color: hsl(234, 39%, 85%);
+    --font-color-hover: #fff;
+    --text-hover-color: hsl(231, 6%, 45%);
+  }
+  .remove-responsiv {
+    display: none;
+  }
+
+  .container {
+    background: var(--bg-top-image) no-repeat;
+    background-color: var(--main-bg);
+    background-size: 100%;
+  }
+  main {
+    width: 90%;
+    min-width: 327px;
+    position: relative;
+    bottom: 3px;
+    position: relative;
+    top: 10px;
+  }
+  .add-new-item span {
+    position: absolute;
+    left: 15px;
+  }
+  .checkmark {
+    position: absolute;
+    left: -10px;
+  }
+
+  .add-new-item {
+    margin: 0 0 13px;
+    padding: 0 15px;
+  }
+  .text {
+    margin-right: 50px;
+    position: relative;
+    right: 15px;
+  }
+  .remove {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+  }
+  .positions {
+    position: relative;
+    bottom: 25px;
+  }
+  h1 {
+    font-size: 2rem;
+    position: relative;
+    left: 16px;
+  }
+  .theme-block {
+    margin-right: 15px;
+  }
+  .hover-text {
+    color: var(--text-hover-color);
+  }
+  .content {
+    color: var(--font-color);
+  }
+  .items-responsiv {
+    margin-left: -11px;
+  }
+  .clear-responsiv {
+    margin-left: 85px;
+  }
+  .bottom-items-responsiv {
+    margin: 0 0 19px;
+  }
+  .remove-responsiv {
+    display: none;
+  }
+  .remove-bottom-items-responsiv {
+    display: inherit;
+  }
+
+  .filter {
+    margin-left: 53px;
+    font-size: 15px;
+  }
 }
