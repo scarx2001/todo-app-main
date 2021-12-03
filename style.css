@@ -209,7 +209,6 @@ ul li.hidden {
   right: 25px;
   top: 25px;
 }
-
 ul li:hover .remove {
   display: block;
 }
