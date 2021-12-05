@@ -265,6 +265,14 @@ ul li:hover .remove {
 .clear:hover {
   color: var(--font-color-hover);
 }
+.clear-completed {
+  color: var(--font-color);
+  cursor: pointer;
+}
+.clear-completed :hover {
+  color: var(--font-color-hover);
+}
+
 @media (max-width: 738px) {
   html {
     font-size: 80%;
